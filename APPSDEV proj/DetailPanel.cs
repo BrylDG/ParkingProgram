@@ -75,18 +75,24 @@ namespace ParkingApp
             TO = pg123.timeOut.ToString();
             hours = pg123.TotalHours();
             total = pg123.TotalAmount();
-            
-            Form3 form3 = new Form3(plate, type, brand, TI, flagdown, rate, hours, total);
-            form3.Show();
-            OnTimeOutClicked(EventArgs.Empty);
-
-            if (this.Parent != null)
+            if (DateTime.Parse(TO) < DateTime.Parse(TI))
             {
-                this.Parent.Controls.Remove(this);
+                InvalidTimeOut.Text = "Invalid Time Out Date and Time!";
             }
             else
             {
-                OnPanelRemoved(EventArgs.Empty);
+                Form3 form3 = new Form3(plate, type, brand, TI, flagdown, rate, hours, total);
+                form3.Show();
+                OnTimeOutClicked(EventArgs.Empty);
+
+                if (this.Parent != null)
+                {
+                    this.Parent.Controls.Remove(this);
+                }
+                else
+                {
+                    OnPanelRemoved(EventArgs.Empty);
+                }
             }
         }
         protected virtual void OnTimeOutClicked(EventArgs e)

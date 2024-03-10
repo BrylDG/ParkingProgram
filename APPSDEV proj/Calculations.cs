@@ -22,7 +22,7 @@ namespace ParkingApp
         public int TotalAmount()
         {
             TimeSpan total = Duration();
-            int th = total.Hours;
+            int th = total.Hours + (total.Days * 24);
             if (total.Minutes > 30)
             {
                 th++;
@@ -33,7 +33,7 @@ namespace ParkingApp
         public int TotalHours()
         {
             TimeSpan total = Duration();
-            int totalHours = total.Hours;
+            int totalHours = total.Hours + (total.Days * 24);
             if (total.Minutes >= 30)
             {
                 totalHours++;

@@ -43,6 +43,7 @@
             panel6 = new Panel();
             panel7 = new Panel();
             label4 = new Label();
+            InvalidTimeOut = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -212,11 +213,22 @@
             label4.TabIndex = 19;
             label4.Text = "TIME IN:";
             // 
+            // InvalidTimeOut
+            // 
+            InvalidTimeOut.AutoSize = true;
+            InvalidTimeOut.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            InvalidTimeOut.ForeColor = Color.Red;
+            InvalidTimeOut.Location = new Point(215, 18);
+            InvalidTimeOut.Name = "InvalidTimeOut";
+            InvalidTimeOut.Size = new Size(0, 20);
+            InvalidTimeOut.TabIndex = 22;
+            // 
             // DetailPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(InvalidTimeOut);
             Controls.Add(panel6);
             Controls.Add(panel7);
             Controls.Add(panel4);
@@ -245,6 +257,7 @@
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -264,5 +277,6 @@
         public Panel panel6;
         public Panel panel7;
         public Label label4;
+        private Label InvalidTimeOut;
     }
 }
