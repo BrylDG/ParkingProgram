@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardMenu));
             MenuPanel = new Panel();
-            pictureBox1 = new PictureBox();
             LogoutButton = new Button();
             label8 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -84,8 +83,9 @@
             ViewBrand = new Label();
             ViewType = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            textBox1 = new TextBox();
+            panel4 = new Panel();
             MenuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             TypePanel.SuspendLayout();
             FlagdownPanel.SuspendLayout();
             RatePanel.SuspendLayout();
@@ -96,37 +96,28 @@
             DatabasePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataView).BeginInit();
             DetailPanel.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // MenuPanel
             // 
-            MenuPanel.BackColor = Color.DarkSlateGray;
-            MenuPanel.Controls.Add(pictureBox1);
+            MenuPanel.BackColor = Color.DimGray;
+            MenuPanel.Controls.Add(panel4);
             MenuPanel.Controls.Add(LogoutButton);
             MenuPanel.Controls.Add(label8);
             MenuPanel.Controls.Add(flowLayoutPanel1);
             MenuPanel.Location = new Point(0, 0);
             MenuPanel.Name = "MenuPanel";
-            MenuPanel.Size = new Size(130, 440);
+            MenuPanel.Size = new Size(144, 431);
             MenuPanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(35, 156);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 51);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
             // 
             // LogoutButton
             // 
-            LogoutButton.BackColor = Color.LightSlateGray;
+            LogoutButton.BackColor = Color.IndianRed;
             LogoutButton.FlatAppearance.BorderSize = 0;
             LogoutButton.FlatStyle = FlatStyle.Flat;
             LogoutButton.ForeColor = Color.Snow;
-            LogoutButton.Location = new Point(31, 395);
+            LogoutButton.Location = new Point(36, 384);
             LogoutButton.Name = "LogoutButton";
             LogoutButton.Size = new Size(72, 27);
             LogoutButton.TabIndex = 10;
@@ -140,7 +131,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.Gainsboro;
-            label8.Location = new Point(23, 129);
+            label8.Location = new Point(31, 131);
             label8.Name = "label8";
             label8.Size = new Size(85, 15);
             label8.TabIndex = 0;
@@ -151,9 +142,9 @@
             flowLayoutPanel1.BackColor = Color.GhostWhite;
             flowLayoutPanel1.BackgroundImage = (Image)resources.GetObject("flowLayoutPanel1.BackgroundImage");
             flowLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
-            flowLayoutPanel1.Location = new Point(12, 23);
+            flowLayoutPanel1.Location = new Point(36, 56);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(104, 100);
+            flowLayoutPanel1.Size = new Size(69, 67);
             flowLayoutPanel1.TabIndex = 4;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -166,9 +157,9 @@
             TypePanel.Controls.Add(label12);
             TypePanel.Controls.Add(label5);
             TypePanel.Controls.Add(label16);
-            TypePanel.Location = new Point(136, 12);
+            TypePanel.Location = new Point(150, 12);
             TypePanel.Name = "TypePanel";
-            TypePanel.Size = new Size(194, 111);
+            TypePanel.Size = new Size(185, 111);
             TypePanel.TabIndex = 1;
             // 
             // label15
@@ -225,7 +216,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(9, 11);
+            label5.Location = new Point(46, 11);
             label5.Name = "label5";
             label5.Size = new Size(88, 16);
             label5.TabIndex = 7;
@@ -237,11 +228,11 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.WhiteSmoke;
-            label16.Location = new Point(3, 21);
+            label16.Location = new Point(9, 21);
             label16.Name = "label16";
-            label16.Size = new Size(182, 15);
+            label16.Size = new Size(168, 15);
             label16.TabIndex = 12;
-            label16.Text = "_________________________";
+            label16.Text = "_______________________";
             label16.Click += label16_Click;
             // 
             // FlagdownPanel
@@ -253,9 +244,9 @@
             FlagdownPanel.Controls.Add(label19);
             FlagdownPanel.Controls.Add(label6);
             FlagdownPanel.Controls.Add(label17);
-            FlagdownPanel.Location = new Point(336, 12);
+            FlagdownPanel.Location = new Point(341, 12);
             FlagdownPanel.Name = "FlagdownPanel";
-            FlagdownPanel.Size = new Size(108, 111);
+            FlagdownPanel.Size = new Size(238, 111);
             FlagdownPanel.TabIndex = 2;
             // 
             // label22
@@ -264,7 +255,7 @@
             label22.BackColor = Color.Transparent;
             label22.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.WhiteSmoke;
-            label22.Location = new Point(34, 88);
+            label22.Location = new Point(100, 86);
             label22.Name = "label22";
             label22.Size = new Size(38, 15);
             label22.TabIndex = 17;
@@ -276,7 +267,7 @@
             label21.BackColor = Color.Transparent;
             label21.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.WhiteSmoke;
-            label21.Location = new Point(34, 71);
+            label21.Location = new Point(100, 71);
             label21.Name = "label21";
             label21.Size = new Size(38, 15);
             label21.TabIndex = 16;
@@ -288,7 +279,7 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.WhiteSmoke;
-            label20.Location = new Point(34, 55);
+            label20.Location = new Point(100, 55);
             label20.Name = "label20";
             label20.Size = new Size(38, 15);
             label20.TabIndex = 15;
@@ -300,7 +291,7 @@
             label19.BackColor = Color.Transparent;
             label19.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.WhiteSmoke;
-            label19.Location = new Point(34, 37);
+            label19.Location = new Point(100, 39);
             label19.Name = "label19";
             label19.Size = new Size(38, 15);
             label19.TabIndex = 14;
@@ -312,7 +303,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(11, 11);
+            label6.Location = new Point(87, 11);
             label6.Name = "label6";
             label6.Size = new Size(70, 16);
             label6.TabIndex = 8;
@@ -324,11 +315,11 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.WhiteSmoke;
-            label17.Location = new Point(7, 21);
+            label17.Location = new Point(32, 21);
             label17.Name = "label17";
-            label17.Size = new Size(98, 15);
+            label17.Size = new Size(182, 15);
             label17.TabIndex = 13;
-            label17.Text = "_____________";
+            label17.Text = "_________________________";
             // 
             // RatePanel
             // 
@@ -339,9 +330,9 @@
             RatePanel.Controls.Add(label23);
             RatePanel.Controls.Add(label7);
             RatePanel.Controls.Add(label18);
-            RatePanel.Location = new Point(450, 12);
+            RatePanel.Location = new Point(585, 12);
             RatePanel.Name = "RatePanel";
-            RatePanel.Size = new Size(106, 111);
+            RatePanel.Size = new Size(183, 111);
             RatePanel.TabIndex = 3;
             // 
             // label26
@@ -350,7 +341,7 @@
             label26.BackColor = Color.Transparent;
             label26.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.WhiteSmoke;
-            label26.Location = new Point(30, 88);
+            label26.Location = new Point(66, 88);
             label26.Name = "label26";
             label26.Size = new Size(38, 15);
             label26.TabIndex = 18;
@@ -362,7 +353,7 @@
             label25.BackColor = Color.Transparent;
             label25.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.WhiteSmoke;
-            label25.Location = new Point(30, 71);
+            label25.Location = new Point(67, 71);
             label25.Name = "label25";
             label25.Size = new Size(38, 15);
             label25.TabIndex = 17;
@@ -374,7 +365,7 @@
             label24.BackColor = Color.Transparent;
             label24.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label24.ForeColor = Color.WhiteSmoke;
-            label24.Location = new Point(30, 55);
+            label24.Location = new Point(67, 54);
             label24.Name = "label24";
             label24.Size = new Size(38, 15);
             label24.TabIndex = 16;
@@ -386,7 +377,7 @@
             label23.BackColor = Color.Transparent;
             label23.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.WhiteSmoke;
-            label23.Location = new Point(37, 37);
+            label23.Location = new Point(73, 38);
             label23.Name = "label23";
             label23.Size = new Size(31, 15);
             label23.TabIndex = 15;
@@ -398,7 +389,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(10, 11);
+            label7.Location = new Point(69, 11);
             label7.Name = "label7";
             label7.Size = new Size(36, 16);
             label7.TabIndex = 9;
@@ -410,17 +401,16 @@
             label18.BackColor = Color.Transparent;
             label18.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.WhiteSmoke;
-            label18.Location = new Point(3, 21);
+            label18.Location = new Point(13, 21);
             label18.Name = "label18";
-            label18.Size = new Size(98, 15);
+            label18.Size = new Size(161, 15);
             label18.TabIndex = 14;
-            label18.Text = "_____________";
+            label18.Text = "______________________";
             // 
             // ParkInPanel
             // 
-            ParkInPanel.BackColor = Color.DarkSlateGray;
+            ParkInPanel.BackColor = Color.DimGray;
             ParkInPanel.Controls.Add(view);
-            ParkInPanel.Controls.Add(label9);
             ParkInPanel.Controls.Add(ErrorMessageLabel);
             ParkInPanel.Controls.Add(button1);
             ParkInPanel.Controls.Add(label4);
@@ -430,17 +420,17 @@
             ParkInPanel.Controls.Add(BrandCB);
             ParkInPanel.Controls.Add(panel2);
             ParkInPanel.Controls.Add(panel3);
-            ParkInPanel.Location = new Point(136, 129);
+            ParkInPanel.Location = new Point(150, 129);
             ParkInPanel.Margin = new Padding(1);
             ParkInPanel.Name = "ParkInPanel";
-            ParkInPanel.Size = new Size(194, 300);
+            ParkInPanel.Size = new Size(185, 300);
             ParkInPanel.TabIndex = 3;
             // 
             // view
             // 
             view.BackColor = Color.Honeydew;
-            view.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            view.Location = new Point(100, 242);
+            view.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            view.Location = new Point(54, 242);
             view.Name = "view";
             view.Size = new Size(85, 21);
             view.TabIndex = 12;
@@ -451,12 +441,12 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.DimGray;
-            label9.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(23, 56);
+            label9.BackColor = Color.Black;
+            label9.Font = new Font("Visitor TT1 BRK", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.ForestGreen;
+            label9.Location = new Point(12, 11);
             label9.Name = "label9";
-            label9.Size = new Size(151, 37);
+            label9.Size = new Size(124, 24);
             label9.TabIndex = 11;
             label9.Text = "00:00:00";
             label9.Click += label9_Click;
@@ -474,8 +464,8 @@
             // button1
             // 
             button1.BackColor = Color.Honeydew;
-            button1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(9, 242);
+            button1.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(54, 215);
             button1.Name = "button1";
             button1.Size = new Size(85, 21);
             button1.TabIndex = 9;
@@ -501,7 +491,7 @@
             TypeCB.ForeColor = Color.Black;
             TypeCB.FormattingEnabled = true;
             TypeCB.Items.AddRange(new object[] { "Motorbike", "SUV", "Sedan", "Van" });
-            TypeCB.Location = new Point(54, 111);
+            TypeCB.Location = new Point(50, 63);
             TypeCB.Margin = new Padding(2);
             TypeCB.Name = "TypeCB";
             TypeCB.Size = new Size(128, 21);
@@ -513,7 +503,7 @@
             panel1.BackColor = Color.PeachPuff;
             panel1.Controls.Add(label1);
             panel1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panel1.Location = new Point(9, 111);
+            panel1.Location = new Point(5, 63);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(79, 21);
@@ -534,7 +524,7 @@
             // PlateNoBox
             // 
             PlateNoBox.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PlateNoBox.Location = new Point(54, 200);
+            PlateNoBox.Location = new Point(50, 168);
             PlateNoBox.Margin = new Padding(2);
             PlateNoBox.Name = "PlateNoBox";
             PlateNoBox.Size = new Size(128, 22);
@@ -544,7 +534,7 @@
             // 
             BrandCB.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BrandCB.FormattingEnabled = true;
-            BrandCB.Location = new Point(54, 155);
+            BrandCB.Location = new Point(50, 117);
             BrandCB.Margin = new Padding(2);
             BrandCB.Name = "BrandCB";
             BrandCB.Size = new Size(128, 21);
@@ -555,7 +545,7 @@
             // 
             panel2.BackColor = Color.PeachPuff;
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(9, 155);
+            panel2.Location = new Point(5, 117);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(79, 21);
@@ -576,7 +566,7 @@
             // 
             panel3.BackColor = Color.PeachPuff;
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(9, 200);
+            panel3.Location = new Point(5, 168);
             panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new Size(79, 22);
@@ -596,21 +586,23 @@
             // DatabasePanel
             // 
             DatabasePanel.BackColor = Color.DarkSlateGray;
+            DatabasePanel.Controls.Add(textBox1);
             DatabasePanel.Controls.Add(dataView);
             DatabasePanel.Controls.Add(label10);
-            DatabasePanel.Location = new Point(336, 129);
+            DatabasePanel.Location = new Point(341, 129);
             DatabasePanel.Name = "DatabasePanel";
-            DatabasePanel.Size = new Size(220, 300);
+            DatabasePanel.Size = new Size(238, 300);
             DatabasePanel.TabIndex = 3;
             // 
             // dataView
             // 
+            dataView.BackgroundColor = Color.DimGray;
             dataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataView.Location = new Point(0, 2);
+            dataView.Location = new Point(-8, -1);
             dataView.Margin = new Padding(3, 2, 3, 2);
             dataView.Name = "dataView";
             dataView.RowHeadersWidth = 51;
-            dataView.Size = new Size(220, 300);
+            dataView.Size = new Size(251, 303);
             dataView.TabIndex = 9;
             // 
             // label10
@@ -625,7 +617,7 @@
             // 
             // DetailPanel
             // 
-            DetailPanel.BackColor = Color.DarkSlateGray;
+            DetailPanel.BackColor = Color.DimGray;
             DetailPanel.Controls.Add(VTimeIn);
             DetailPanel.Controls.Add(VPlateNo);
             DetailPanel.Controls.Add(VBrand);
@@ -634,9 +626,9 @@
             DetailPanel.Controls.Add(ViewPlateNo);
             DetailPanel.Controls.Add(ViewBrand);
             DetailPanel.Controls.Add(ViewType);
-            DetailPanel.Location = new Point(562, 12);
+            DetailPanel.Location = new Point(585, 129);
             DetailPanel.Name = "DetailPanel";
-            DetailPanel.Size = new Size(206, 416);
+            DetailPanel.Size = new Size(183, 299);
             DetailPanel.TabIndex = 3;
             DetailPanel.Paint += DetailPanel_Paint;
             // 
@@ -723,6 +715,25 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(15, 15);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Search";
+            textBox1.Size = new Size(142, 20);
+            textBox1.TabIndex = 10;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Black;
+            panel4.Controls.Add(label9);
+            panel4.Location = new Point(0, 1);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(146, 46);
+            panel4.TabIndex = 11;
+            // 
             // DashboardMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -743,7 +754,6 @@
             Load += DashboardMenu_Load_1;
             MenuPanel.ResumeLayout(false);
             MenuPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             TypePanel.ResumeLayout(false);
             TypePanel.PerformLayout();
             FlagdownPanel.ResumeLayout(false);
@@ -763,6 +773,8 @@
             ((System.ComponentModel.ISupportInitialize)dataView).EndInit();
             DetailPanel.ResumeLayout(false);
             DetailPanel.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -812,7 +824,6 @@
         private Label label25;
         private Label label24;
         private Label label23;
-        private PictureBox pictureBox1;
         private Button view;
         private DataGridView dataView;
         private Label ViewBrand;
@@ -822,5 +833,7 @@
         private Label VPlateNo;
         private Label VBrand;
         private Label VType;
+        private TextBox textBox1;
+        private Panel panel4;
     }
 }
