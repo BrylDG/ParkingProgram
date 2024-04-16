@@ -65,7 +65,7 @@
             LoginButton.FlatStyle = FlatStyle.Flat;
             LoginButton.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LoginButton.ForeColor = Color.Black;
-            LoginButton.Location = new Point(117, 347);
+            LoginButton.Location = new Point(119, 347);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(56, 21);
             LoginButton.TabIndex = 2;
@@ -181,11 +181,12 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(83, 12);
+            pictureBox1.Location = new Point(90, 31);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(128, 124);
+            pictureBox1.Size = new Size(112, 101);
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
@@ -195,6 +196,8 @@
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.DarkSlateGray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = ExitButton;
             ClientSize = new Size(289, 440);
             ControlBox = false;
