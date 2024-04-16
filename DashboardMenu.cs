@@ -17,12 +17,11 @@ namespace ParkNClick
 {
     public partial class DashboardMenu : Form
     {
-        VehicleData VD;
         Login loginForm;
-        DbConnection database;
+         DbConnection database;
         public DashboardMenu(Login loginForm)
         {
-
+            
             InitializeComponent();
             this.loginForm = loginForm;
             database = new DbConnection("(localdb)\\MSSQLLocalDB", "Clifford", "", "");
@@ -136,15 +135,12 @@ namespace ParkNClick
             if (TypeCB.Text == "" || BrandCB.Text == "" || PlateNoBox.Text == "") { ErrorMessageLabel.Text = "Missing Detail Inputs."; ResetLabel(ErrorMessageLabel); }
             else
             {
-                DateTime timeIn = DateTime.Now;
-                VD = new VehicleData(TypeCB.Text, BrandCB.Text, PlateNoBox.Text, timeIn.ToString()); //ako g sulod sa usa ka class ang mga details, pwede nimo buahton is: objectSaImoDB  = VD.Variable
                 TypeCB.Text = "";
                 BrandCB.Text = "";
                 PlateNoBox.Text = "";
 
-                //AYAW LNG SANI HILABTI NAA RAKOI G ADD BAGO NA CODE NA SAME UG FUNCTION ANI
-
-                /*brand = comboBox1.Text;
+                /* timeIn = DateTime.Now;
+                 brand = comboBox1.Text;
                  PlateNumber = textBox1.Text;
                  VD.Details.Add(new VehicleData(number, type, timeIn.ToString(), PlateNumber, brand));
                  DetailPanel detailPanel = new DetailPanel(VD.Details, number);
@@ -165,6 +161,7 @@ namespace ParkNClick
                  ErrorMessageLabel.Text = "";
                 */
 
+
             }
         }
 
@@ -183,7 +180,7 @@ namespace ParkNClick
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label9.Text = DateTime.Now.ToString("hh:mm tt");
+            label9.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
         private void DashboardMenu_Load(object sender, EventArgs e)
         {
@@ -202,32 +199,7 @@ namespace ParkNClick
         }
         private void view_Click(object sender, EventArgs e)
         {
-            //ako rani gi butang para makita nako if naka sulod ba ang values sa Vehicle na class, ayaw lng nya ni tangtanga kai gamiton koni sa pag display
-            VType.Text = VD.type;
-            VBrand.Text = VD.brand;
-            VPlateNo.Text = VD.plateNo;
-            VTimeIn.Text = VD.timeIn;
             LoadData();
-        }
-
-        private void DashboardMenu_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ViewTimeIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VBrand_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

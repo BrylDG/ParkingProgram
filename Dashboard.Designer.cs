@@ -39,7 +39,7 @@
             // 
             // SidePanel
             // 
-            SidePanel.BackColor = Color.FromArgb(27, 37, 65);
+            SidePanel.BackColor = Color.WhiteSmoke;
             SidePanel.Location = new Point(0, 0);
             SidePanel.Name = "SidePanel";
             SidePanel.Size = new Size(150, 440);
@@ -47,7 +47,7 @@
             // 
             // RatePanel
             // 
-            RatePanel.BackColor = Color.FromArgb(38, 52, 88);
+            RatePanel.BackColor = Color.White;
             RatePanel.Location = new Point(166, 12);
             RatePanel.Name = "RatePanel";
             RatePanel.Size = new Size(192, 111);
@@ -55,7 +55,7 @@
             // 
             // ParkinPanel
             // 
-            ParkinPanel.BackColor = Color.FromArgb(38, 52, 88);
+            ParkinPanel.BackColor = Color.WhiteSmoke;
             ParkinPanel.Location = new Point(166, 129);
             ParkinPanel.Name = "ParkinPanel";
             ParkinPanel.Size = new Size(164, 299);
@@ -64,15 +64,16 @@
             // 
             // DisplayPanel
             // 
-            DisplayPanel.BackColor = Color.FromArgb(32, 44, 76);
+            DisplayPanel.BackColor = Color.WhiteSmoke;
             DisplayPanel.Location = new Point(571, 12);
             DisplayPanel.Name = "DisplayPanel";
             DisplayPanel.Size = new Size(197, 416);
             DisplayPanel.TabIndex = 3;
+            DisplayPanel.Paint += DisplayPanel_Paint;
             // 
             // DatabasePanel
             // 
-            DatabasePanel.BackColor = Color.FromArgb(38, 52, 88);
+            DatabasePanel.BackColor = Color.Gainsboro;
             DatabasePanel.Location = new Point(336, 129);
             DatabasePanel.Name = "DatabasePanel";
             DatabasePanel.Size = new Size(220, 299);
@@ -81,7 +82,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.BackColor = Color.FromArgb(44, 59, 100);
+            flowLayoutPanel1.BackColor = Color.WhiteSmoke;
             flowLayoutPanel1.Location = new Point(355, 12);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(106, 111);
@@ -89,7 +90,7 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.BackColor = Color.FromArgb(51, 68, 113);
+            flowLayoutPanel2.BackColor = Color.WhiteSmoke;
             flowLayoutPanel2.Location = new Point(450, 12);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(106, 111);
@@ -99,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.FromArgb(30, 41, 71);
+            BackColor = Color.DarkSlateGray;
             ClientSize = new Size(780, 440);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
